@@ -18,13 +18,22 @@ body {
   max-width: 1920px;
   background-color: #f1f5f8;
   font-family: "Open Sans", sans-serif;
-}
-
-.container {
-  max-width: 1700px;
   margin: 0 auto;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0 50px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  padding: 50px 0;
+}
 .title {
   display: flex;
   justify-content: center;
@@ -49,7 +58,7 @@ form {
   padding: 0 0 50px 0;
 }
 
-.form-control {
+.form-control, .search-repo {
   box-sizing: border-box;
   border: solid 1px red;
   width: 300px;
@@ -58,7 +67,7 @@ form {
   padding-left: 30px;
 }
 
-.btn {
+.btn, .search-btn {
   cursor: pointer;
   box-sizing: border-box;
   border: solid 1px red;
@@ -66,10 +75,10 @@ form {
   border-radius: 30px;
 }
 
-.list-group {
+.list-group, .search__result {
   text-decoration: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 li {
@@ -82,3 +91,4 @@ li {
 p {
   margin-bottom: 10px;
 }
+
