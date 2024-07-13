@@ -73,7 +73,7 @@ const searchRepo = async (query) => {
   );
   if (response.ok) {
     const result = await response.json();
-    return result.items.length < 10 ? result.items : result.items.slice(0, 9);
+    return result.items.length < 100 ? result.items : result.items.slice(0, 90);
   } return;
 };
 
